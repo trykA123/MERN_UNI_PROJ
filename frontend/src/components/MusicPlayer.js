@@ -15,7 +15,7 @@ const MusicPlayer = () => {
                 <span id="duration"></span>
             </div>
         </div>
-
+        
         <div className='music-player-controls'>
             <i className="fas fa-backward" id="prev" title="Previous"></i>
             <i className="fas fa-play main-button" id="play" title="Play"></i>

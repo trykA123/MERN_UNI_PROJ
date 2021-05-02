@@ -9,7 +9,7 @@ const SearchBar = () => (
             placeholder="Search for music on YouTube"
             name="s" 
         />
-        <button type="submit">Search</button>
+        <span onClick='' className='add-from-youtube'>Add</span>
     </form>
 );
 
