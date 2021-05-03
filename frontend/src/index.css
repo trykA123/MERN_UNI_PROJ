@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css');
 
-html {
-    box-sizing: border-box;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background: #c9ced3;
+    background: rgb(10,10,10);
+    background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(75,75,78,1) 35%, rgba(16,17,17,1) 100%);
 }
 
 .topnav {
-    background-color: #333;
+    background: rgb(10,10,10);
+    background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(75,75,78,1) 35%, rgba(16,17,17,1) 100%);
     overflow: hidden;
+    padding: 10px;
 }
   
   /* Style the links inside the navigation bar */
@@ -23,17 +27,46 @@ body {
     text-decoration: none;
     font-size: 17px;
 }
-  
+
   /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: rgb(15, 146, 179);
+    box-shadow: 0 12px 16px 0 rgba(15, 146, 179, 0.24),0 17px 50px 0 rgba(57, 187, 204, 0.19);
     color: black;
 }
   
   /* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
+
+.topnav .search-bar {
+    float: right;
+    padding: 14px 16px;
+    border: none;
+    font-size: 17px;
+    width: 400px;
+    margin: auto;
+    
+}
+
+.topnav #header-search {
+    float: right;
+    width: 200px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.topnav #header-search:focus {
+    width: 100%;
+}
+
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 .player-container {
@@ -47,9 +80,10 @@ body {
 }
 
 .music-player {
-    height: 80vh;
-    width: 70vw;
-    background: #e7e7e7;
+    height: 85vh;
+    width: 50vw;
+    background: rgb(52,71,97);
+    background: linear-gradient(0deg, rgba(52,71,97,1) 0%, rgba(30,32,32,1) 100%);
     border-radius: 20px;                                                                                                                                     
     box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
     display: block;
@@ -58,7 +92,7 @@ body {
     flex-basis: auto;
     align-self: auto;
     order: 0;
-    margin-top: 10%;
+    margin-top: 3%;
     margin-left: 3%;
 }
   
@@ -107,7 +141,7 @@ body {
   
   /* Progress */
 .progress-container-music {
-    background: #f2f2f2;
+    background: #c7c2c2;
     border-radius: 5px;
     cursor: pointer;
     margin: 65px 30px;
@@ -116,7 +150,7 @@ body {
 }
 
 .progress {
-    background: #242323;
+    background: #16b2b8;
     border-radius: 5px;
     height: 100%;
     width: 0%;
@@ -140,7 +174,7 @@ body {
   
 .fas {
     font-size: 30px;
-    color: rgb(129, 129, 129);
+    color: rgb(199, 194, 194);
     margin-right: 0px;
     margin-left: 13%;
     padding-left: 10%;
@@ -181,17 +215,46 @@ h3 {
 }
 
 .playlist {
-    height: 80vh;
+    height: 85vh;
     width: 30vw;
-    background: #a53131;
+    background: rgb(52,71,97);
+    background: linear-gradient(0deg, rgba(52,71,97,1) 0%, rgba(30,32,32,1) 100%);
     border-radius: 20px;                                                                                                                                         
     box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
-    display: block;
+    display: flex;
+    flex-direction: column;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
     align-self: auto;
     order: 0;
-    margin-top: 10%;
-    margin-left: 3%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: 3%;
 }
+
+.search-list {
+    width: 100%;
+    height: 8%;
+}
+
+.playlist #playlist-search {
+    width: 30%;
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 5%;
+    margin-right: 16px;
+    font-size: 17px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.playlist #playlist-search:focus {
+    width: 70%;
+}
+  
+.music-list {
+    text-decoration: none;
+    list-style-type: none;
+} 
