@@ -1,15 +1,13 @@
-const Header = (props) => {
+import SearchBar from './Search';
+
+const Header = () => {
     return (
         <header className='topnav'>
-            <a href>Home</a>
-            <a href>Equalizer</a>
-            <a href>About</a>
+            <a href='home'>Home</a>
+            <a href='equalizer'>Equalizer</a>
+            <a href='about'>About</a>             
         </header>
     )
-}
-
-Header.defaultProps = {
-    title: 'Task Trackser',
 }
 
 export default Header
